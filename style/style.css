@@ -113,7 +113,7 @@ img {
 
 /* Кнопка выполнено */
 
-.done {
+.button {
   display: block;
   margin: 10px auto;
   background-image: linear-gradient(
@@ -133,7 +133,7 @@ img {
   border-radius: 10px;
 }
 
-.done:hover {
+.button:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
