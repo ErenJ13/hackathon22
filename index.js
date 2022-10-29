@@ -178,6 +178,7 @@ const createDayCard = function (event) {
     <div class="card__text">
     <h2 class='card__title'>${tasks[i].date}</h2>
     <p class="card__task">Задание: ${tasks[i].task}</p>
+    <button class="done">Готово!</button>
     </div>`;
     createOverlay();
     container.removeEventListener("click", createDayCard);

@@ -71,6 +71,9 @@ img {
 
 .card__text {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card__title {
@@ -106,6 +109,34 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Кнопка выполнено */
+
+.done {
+  display: block;
+  margin: 10px auto;
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+  border: none;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.done:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
