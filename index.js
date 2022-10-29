@@ -1,3 +1,5 @@
+"use strict";
+
 const data = `
 [
     {
@@ -163,6 +165,7 @@ const createDays = function () {
 const createDayCard = function (event) {
   const dayCard = Array.from(document.querySelectorAll(".day")); // создаем массив из карточек, которые находятся внутри контейнера
   let i = dayCard.indexOf(event.target);
+  console.log(dayCard);
   console.log(i);
   console.log(event.target);
   if (i !== -1) {
@@ -175,7 +178,7 @@ const createDayCard = function (event) {
     <div>
     <h2 class='card__title'>${tasks[i].date}</h2>
     <p class="card__task">Задание: ${tasks[i].task}</p>
-    <img src="" alt="Нажмите, чтобы закрыть окно" />
+    <img class="close" src="" alt="Нажмите, чтобы закрыть окно" />
     </div>
     </div>`;
     createOverlay();
