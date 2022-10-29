@@ -116,6 +116,14 @@ img {
   .day-24 {
     grid-column: 2/3;
   }
+
+  .popup img {
+    max-height: 300px;
+  }
+
+  .popup {
+    max-height: max-content;
+  }
 }
 
 @media screen and (max-width: 480px) {
