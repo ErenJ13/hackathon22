@@ -1,3 +1,5 @@
+"use strict";
+
 const data = `
 [
     {
@@ -163,6 +165,7 @@ const createDays = function () {
 const createDayCard = function (event) {
   const dayCard = Array.from(document.querySelectorAll(".day")); // создаем массив из карточек, которые находятся внутри контейнера
   let i = dayCard.indexOf(event.target);
+  console.log(dayCard);
   console.log(i);
   console.log(event.target);
   if (i !== -1) {
@@ -170,12 +173,12 @@ const createDayCard = function (event) {
     popup.className = "popup";
     mainHTML.append(popup);
     popup.innerHTML = `<div>
+    <div>
     <img src="${tasks[i].img}" alt="Картинка с ${tasks[i].date}" />
     </div>
-    <div>
-    <h3 class='card__title'>${tasks[i].date}</h3>
+    <div class="card__text">
+    <h2 class='card__title'>${tasks[i].date}</h2>
     <p class="card__task">Задание: ${tasks[i].task}</p>
-    <img src="" alt="Нажмите, чтобы закрыть окно" />
     </div>
     </div>`;
     createOverlay();
