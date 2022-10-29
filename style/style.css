@@ -118,11 +118,12 @@ img {
   }
 
   .popup img {
-    max-height: 300px;
+    max-height: 200px;
   }
 
   .popup {
     max-height: max-content;
+    display: block;
   }
 }
 
