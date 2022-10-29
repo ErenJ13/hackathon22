@@ -147,6 +147,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    body{
+        background-image: url("./simple-christmas-background.jpg");
+        background-size: 150em 100%;
+        }
   .container {
     grid-template-columns: repeat(3, minmax(50px, 1fr));
   }
@@ -169,4 +173,5 @@ img {
   .container {
     display: block;
   }
+ 
 }
