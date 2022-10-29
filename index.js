@@ -173,13 +173,12 @@ const createDayCard = function (event) {
     popup.className = "popup";
     mainHTML.append(popup);
     popup.innerHTML = `<div>
-    <div>
     <img src="${tasks[i].img}" alt="Картинка с ${tasks[i].date}" />
     </div>
     <div class="card__text">
     <h2 class='card__title'>${tasks[i].date}</h2>
     <p class="card__task">Задание: ${tasks[i].task}</p>
-    </div>
+    <button class="button">Готово!</button>
     </div>`;
     createOverlay();
     container.removeEventListener("click", createDayCard);
