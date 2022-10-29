@@ -173,6 +173,7 @@ const createDayCard = function (event) {
     popup.className = "popup";
     mainHTML.append(popup);
     popup.innerHTML = `<div>
+    <div>
     <img src="${tasks[i].img}" alt="Картинка с ${tasks[i].date}" />
     </div>
     <div class="card__text">
