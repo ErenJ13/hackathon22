@@ -1,49 +1,109 @@
-body
-{
-    
-    background-image: url(/style/simple-christmas-background.jpg);
-    background-size: 100% 100%;
-   
-    
-}
-.header
-{
-    background-color: rgb(252, 254, 255, 0.4);
-}
-h1{
-    text-align: center;
-    font-size: 56px;
-    font-family: 'Lobster', cursive;
-    
-
-    
-}
-h2{
-    text-align: center;
-    font-size: 34px;
-    font-family: 'Lobster', cursive;
-    
-}
-p{
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 20px;
-    
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(248, 248, 248);
+  background-image: url(/style/simple-christmas-background.jpg);
+  background-size: 100% 100%;
+  position: relative;
 }
 
-.container
-{
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    
+.header {
+  padding: 20px;
+  background-color: rgb(252, 254, 255, 0.6);
 }
 
-img{
-    width: 100%;
-    height: 100%;
-    
+main {
+  padding: 20px 30px;
 }
-.day
-{
-    padding: 5px;
+
+h1,
+h2,
+p {
+  margin: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 56px;
+  font-family: "Lobster", cursive;
+}
+h2 {
+  text-align: center;
+  font-size: 34px;
+  font-family: "Lobster", cursive;
+}
+p {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Стили для контейнера */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(50px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+/* Стили для попапа */
+.popup {
+  position: fixed;
+  width: 70%;
+  max-height: 70%;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  border: 2px solid black;
+  z-index: 10;
+}
+
+.card__text {
+  width: 100%;
+}
+
+.card__title {
+  margin: 0 auto;
+}
+
+.card__task {
+  text-align: start;
+}
+
+/* Стили для темной подложки при открытии попапа */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+/* Стили для карточек, чтобы срабатывал клик */
+
+.day {
+  position: relative;
+  padding: 5px;
+}
+
+.day::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
