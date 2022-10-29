@@ -173,7 +173,7 @@ const createDayCard = function (event) {
     <img src="${tasks[i].img}" alt="Картинка с ${tasks[i].date}" />
     </div>
     <div>
-    <h3 class='card__title'>${tasks[i].date}</h3>
+    <h2 class='card__title'>${tasks[i].date}</h2>
     <p class="card__task">Задание: ${tasks[i].task}</p>
     <img src="" alt="Нажмите, чтобы закрыть окно" />
     </div>
