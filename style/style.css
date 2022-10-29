@@ -81,7 +81,7 @@ img {
 }
 
 .card__task {
-  text-align: start;
+  text-align: center;
 }
 
 /* Стили для темной подложки при открытии попапа */
